@@ -42,7 +42,11 @@ public class Solution_5656_벽돌깨기 {
 		in.close();
 	}
 	private static void dfs(int depth) {
-		if(depth==N-1) {
+		if(ans==block) {
+			max=ans;
+			return;
+		}
+		if(depth==N) {
 			max = Math.max(max, ans);
 			return;
 		}
